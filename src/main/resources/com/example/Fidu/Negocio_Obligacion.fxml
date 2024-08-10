@@ -41,7 +41,7 @@
         <TextField fx:id="descripcionNegocio" editable="false" layoutX="14.0" layoutY="102.0" />
         <TextField fx:id="fechaFn" editable="false" layoutX="55.0" layoutY="132.0" prefHeight="25.0" prefWidth="108.0" />
         <TextField fx:id="fechaIn" editable="false" layoutX="13.0" layoutY="132.0" prefHeight="25.0" prefWidth="40.0" />
-        <TextField fx:id="idObligacionAgg" layoutX="184.0" layoutY="98.0" promptText="ID Negocio Fiduciario" />
+        <TextField fx:id="idObligacionAgg" layoutX="184.0" layoutY="98.0" promptText="ID Obligacion Fiduciaria" />
 
     </children>
 

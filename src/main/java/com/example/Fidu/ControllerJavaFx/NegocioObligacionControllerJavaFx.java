@@ -70,13 +70,13 @@ public class NegocioObligacionControllerJavaFx implements Initializable {
     }
     @FXML
     public void inicio() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/Fidu/FiduApplication.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/Fidu/Negocios.fxml"));
         loader.setControllerFactory(context::getBean);
 
         // Obtener la escena actual y el stage
         Stage stage = (Stage) backNO.getScene().getWindow();
         Scene scene = new Scene(loader.load());
-        stage.setTitle("Inicio");
+        stage.setTitle("Negocios");
         stage.setScene(scene);
         stage.show();
 

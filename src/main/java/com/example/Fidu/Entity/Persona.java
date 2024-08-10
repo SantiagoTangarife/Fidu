@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -27,14 +28,14 @@ public class Persona {
     String apellido;
     String tipoDocumento;
 
-    @OneToMany(fetch = FetchType.EAGER) // Cambio a EAGER por velocidad
+    @ManyToMany(fetch = FetchType.EAGER) // Cambio a EAGER por velocidad
     @JoinTable(
             name = "persona_negocio",
             joinColumns = @JoinColumn(name = "personaId", referencedColumnName = "personaId"),
             inverseJoinColumns = @JoinColumn(name = "negocioId")
     )
 
-    private Set<Negocio> negocios;
+    private Set<Negocio> negocios=new HashSet<>();
 
 
 }

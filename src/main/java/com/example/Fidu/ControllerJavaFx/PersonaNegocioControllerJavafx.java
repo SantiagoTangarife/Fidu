@@ -9,10 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +49,7 @@ public class PersonaNegocioControllerJavafx implements Initializable {
     @FXML
     private TextField NombreP, ApellidoP, NumeroDocP, TipoDocP, idNegocioAgg;
     @FXML
-    private Button aggN,guardarN,cancelarN,backNP;
+    private Button aggN,guardarN,cancelarN,backNP,descargar;
 
     private Long personaId;
     private Persona usuario;
@@ -73,16 +70,36 @@ public class PersonaNegocioControllerJavafx implements Initializable {
     }
     @FXML
     public void inicio() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/Fidu/FiduApplication.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/Fidu/Personas.fxml"));
         loader.setControllerFactory(context::getBean);
 
         // Obtener la escena actual y el stage
         Stage stage = (Stage) backNP.getScene().getWindow();
         Scene scene = new Scene(loader.load());
-        stage.setTitle("Inicio");
+        stage.setTitle("Personas");
         stage.setScene(scene);
         stage.show();
 
+    }
+
+    public void exportar(){
+
+        List<String> dato=personaService.exportar(usuario);
+        mostrarAlerta(dato.get(0), dato.get(1));
+
+    }
+    private void mostrarAlerta(String titulo, String mensaje) {
+        Alert alert;
+        if(titulo.equals("Exito")){
+            alert= new Alert(Alert.AlertType.INFORMATION);}
+        else {
+           alert = new Alert(Alert.AlertType.ERROR);}
+
+
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
     }
 
     public void agg(boolean visible){
