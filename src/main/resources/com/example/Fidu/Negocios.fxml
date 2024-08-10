@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Fidu.ControllerJavaFx.NegocioControllerJavaFx">
+    <children>
+        <ImageView fx:id="fondoInicio" fitHeight="329.0" fitWidth="616.0" layoutY="8.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/img/img3.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="listaNegocios" layoutX="6.0" layoutY="258.0" prefWidth="607.0" AnchorPane.topAnchor="200.0">
+            <columns>
+                <TableColumn fx:id="colNegociosId" prefWidth="59.0" text="ID" />
+                <TableColumn fx:id="colNegociosNombre" prefWidth="114.0" text="Nombre" />
+                <TableColumn fx:id="colNegociosDescripcion" minWidth="0.0" prefWidth="241.0" text="Descripcion" />
+                <TableColumn fx:id="colNegociosFechaI" prefWidth="81.0" text="Fecha Inicio" />
+                <TableColumn fx:id="colNegociosFechaF" prefWidth="110.0" text="Fecha Fin" />
+
+            </columns>
+        </TableView>
+        <Label layoutX="258.0" layoutY="19.0" text="Negocios">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+        <Button fx:id="buscarN" layoutX="340.0" layoutY="47.0" mnemonicParsing="false" onAction="#buscarNegocio" text="Buscar" />
+        <TextField fx:id="idNegocioBusqueda" layoutX="13.0" layoutY="49.0" prefWidth="300.0" />
+
+        <Button fx:id="aggN" layoutX="401.0" layoutY="47.0" mnemonicParsing="false" onAction="#toAdd" text="Agregar" />
+        <TextField fx:id="nombreAddN" layoutX="15.0" layoutY="80.0" prefHeight="25.0" prefWidth="150.0" promptText="Nombre" />
+        <TextField fx:id="descripcionAddN" layoutX="171.0" layoutY="81.0" prefHeight="51.0" prefWidth="150.0" promptText="Descripcion" />
+        <Button fx:id="guardarN" layoutX="349.0" layoutY="85.0" mnemonicParsing="false" onAction="#agregarNegocio" text="Guardar" />
+        <Button fx:id="cancelarN" layoutX="349.0" layoutY="117.0" mnemonicParsing="false" onAction="#cancelarNegocio" text="Cancelar" />
+        <Button fx:id="actualizarN" layoutX="422.0" layoutY="84.0" mnemonicParsing="false" onAction="#update" text="Actualizar" />
+        <Button fx:id="eliminarN" layoutX="429.0" layoutY="116.0" mnemonicParsing="false" onAction="#delete" text="Eliminar" />
+      <DatePicker fx:id="fechaI" layoutX="13.0" layoutY="144.0" prefHeight="25.0" prefWidth="150.0" promptText="Fecha Inicio" />
+      <DatePicker fx:id="fechaF" layoutX="171.0" layoutY="144.0" prefHeight="25.0" prefWidth="150.0" promptText="Fecha Fin" />
+      <TextField fx:id="idNegocio" layoutX="15.0" layoutY="112.0" prefHeight="25.0" prefWidth="150.0" promptText="Nit o ID negocio" />
+        <Button fx:id="backNe" contentDisplay="CENTER" layoutX="23.0" layoutY="15.0" mnemonicParsing="false" onAction="#inicio" text=" ⬅" textAlignment="CENTER" />
+        <Button fx:id="findObligacion" layoutX="522.0" layoutY="97.0" mnemonicParsing="false" onAction="#openObligacionesView" text="Consultar" />
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Fidu.ControllerJavaFx.PersonasControllerJavaFx">
+   <children>
+      <ImageView fx:id="fondoInicio" fitHeight="329.0" fitWidth="616.0" layoutY="8.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/img/img3.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="listaPersonas" layoutX="6.0" layoutY="258.0" prefWidth="607.0" AnchorPane.topAnchor="200.0">
+      <columns>
+         <TableColumn fx:id="colPersonaId" text="ID" />
+         <TableColumn fx:id="colNombre" prefWidth="114.0" text="Nombre" />
+         <TableColumn fx:id="colApellido" prefWidth="94.0" text="Apellido" />
+         <TableColumn fx:id="colTipoDocumento" prefWidth="117.0" text="Tipo Documento" />
+         <TableColumn fx:id="colNumeroDocumento" maxWidth="195.0" minWidth="-1.0" prefWidth="163.0" text="Número Documento" />
+      </columns>
+      </TableView>
+      <Label layoutX="258.0" layoutY="19.0" text="Personas" >
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Button fx:id="buscar" layoutX="340.0" layoutY="47.0" mnemonicParsing="false" onAction="#buscarPersona" text="Buscar" />
+      <TextField fx:id="numeroDocumento" layoutX="13.0" layoutY="49.0" prefWidth="300.0" />
+      <Button fx:id="agg" layoutX="401.0" layoutY="47.0" mnemonicParsing="false" onAction="#toAdd" text="Agregar" />
+      <TextField fx:id="nombreAdd" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="150.0" promptText="Nombre" />
+      <TextField fx:id="apellidoAdd" layoutX="14.0" layoutY="117.0" prefHeight="25.0" prefWidth="150.0" promptText="Apellido" />
+      <TextField fx:id="numeroDocAdd" layoutX="175.0" layoutY="116.0" prefHeight="25.0" prefWidth="152.0" promptText="Numero de documento" />
+      <ComboBox fx:id="tipoDoc" layoutX="178.0" layoutY="85.0" prefWidth="150.0" promptText="Seleccione Tipo" />
+      <Button fx:id="guardar" layoutX="349.0" layoutY="85.0" mnemonicParsing="false" onAction="#agregarPersona" text="Guardar" />
+      <Button fx:id="cancelar" layoutX="349.0" layoutY="117.0" mnemonicParsing="false" onAction="#cancelarPersona" text="Cancelar" />
+      <Button fx:id="actualizar" layoutX="422.0" layoutY="84.0" mnemonicParsing="false" onAction="#update" text="Actualizar" />
+      <Button fx:id="eliminar" layoutX="429.0" layoutY="116.0" mnemonicParsing="false" onAction="#delete" text="Eliminar" />
+      <Button fx:id="backPe" contentDisplay="CENTER" layoutX="23.0" layoutY="15.0" mnemonicParsing="false" onAction="#inicio" text=" ⬅" textAlignment="CENTER" />
+      <Button fx:id="findNegocio" layoutX="522.0" layoutY="97.0" mnemonicParsing="false" onAction="#openNegociosView" text="Consultar" />
+
+   </children>
+</AnchorPane>

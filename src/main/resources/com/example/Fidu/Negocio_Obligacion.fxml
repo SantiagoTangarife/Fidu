@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Fidu.ControllerJavaFx.NegocioObligacionControllerJavaFx"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <ImageView fx:id="fondoInicio" fitHeight="329.0" fitWidth="616.0" layoutY="8.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/img/img3.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="listaObligacionesNegocio" layoutX="6.0" layoutY="258.0" prefWidth="607.0" AnchorPane.topAnchor="200.0">
+            <columns>
+                <TableColumn fx:id="colObligacionesId" prefWidth="59.0" text="ID" />
+                <TableColumn fx:id="colObligacionesMonto" prefWidth="114.0" text="Monto" />
+                <TableColumn fx:id="colObligacionesDescripcion" minWidth="0.0" prefWidth="241.0" text="Descripcion" />
+                <TableColumn fx:id="colObligacionesFechaF" prefWidth="110.0" text="Fecha Vencimiento" />
+
+            </columns>
+        </TableView>
+        <Label layoutX="258.0" layoutY="19.0" text="Obligaciones" >
+        <font>
+            <Font name="System Bold" size="13.0" />
+        </font></Label>
+        <Button fx:id="aggO" layoutX="401.0" layoutY="47.0" mnemonicParsing="false" onAction="#agregar" text="Agregar" />
+        <Button fx:id="guardarO" layoutX="349.0" layoutY="85.0" mnemonicParsing="false" onAction="#guardar" text="Guardar" />
+        <Button fx:id="cancelarO" layoutX="349.0" layoutY="117.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+        <Button fx:id="backNO" contentDisplay="CENTER" layoutX="23.0" layoutY="15.0" mnemonicParsing="false" onAction="#inicio" text=" ⬅" textAlignment="CENTER" />
+        <TextField fx:id="idNegocio" editable="false" layoutX="14.0" layoutY="70.0" />
+        <TextField fx:id="nombreN" editable="false" layoutX="14.0" layoutY="70.0" />
+        <TextField fx:id="descripcionNegocio" editable="false" layoutX="14.0" layoutY="102.0" />
+        <TextField fx:id="fechaFn" editable="false" layoutX="55.0" layoutY="132.0" prefHeight="25.0" prefWidth="108.0" />
+        <TextField fx:id="fechaIn" editable="false" layoutX="13.0" layoutY="132.0" prefHeight="25.0" prefWidth="40.0" />
+        <TextField fx:id="idObligacionAgg" layoutX="184.0" layoutY="98.0" promptText="ID Negocio Fiduciario" />
+
+    </children>
+
+</AnchorPane>

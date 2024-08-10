@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Fidu.ControllerJavaFx.FiduApplicationControllerJavaFx">
+   <children>
+      <ImageView fx:id="fondoInicio" fitHeight="385.0" fitWidth="583.0" opacity="0.83" pickOnBounds="true" preserveRatio="true"
+                 layoutX="8.5" layoutY="7.5">
+         <image>
+            <Image url="@/img/img1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="194.0" layoutY="46.0" prefHeight="31.0" prefWidth="231.0" text="Bienvenido al Crud">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></Label>
+      <Button fx:id="personas" layoutX="269.0" layoutY="164.0" mnemonicParsing="false" onAction="#personas" text="Personas" textAlignment="CENTER" />
+      <Button fx:id="negocios" layoutX="267.0" layoutY="208.0" mnemonicParsing="false" onAction="#negocios" text="Negocios" />
+      <Button fx:id="obligaciones" layoutX="259.0" layoutY="248.0" mnemonicParsing="false" onAction="#obligaciones" text="Obligaciones" />
+      <Text layoutX="197.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione La Categoria Para Consultar" />
+   </children>
+</AnchorPane>
